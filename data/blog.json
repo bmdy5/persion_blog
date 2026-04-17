@@ -1,0 +1,16 @@
+[
+  {
+    "title": "个人规划示例",
+    "slug": "plan-example",
+    "tags": ["规划"],
+    "content": "<p>这是个人规划的示例内容，展示未来的计划与目标。</p>",
+    "cover": "https://via.placeholder.com/400x200"
+  },
+  {
+    "title": "项目展示示例",
+    "slug": "project-example",
+    "tags": ["项目"],
+    "content": "<p>这是项目展示的示例内容，展示已完成或进行中的项目。</p>",
+    "cover": "https://via.placeholder.com/400x200"
+  }
+]
