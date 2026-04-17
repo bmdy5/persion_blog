@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Liang Ge – Personal Blog</title>
+<meta name="description" content="Personal blog showcasing planning, projects, and thoughts.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&family=Work+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-dim": "#940084",
+                    "inverse-surface": "#0d0f0d",
+                    "surface-variant": "#dcddd9",
+                    "on-secondary-fixed": "#640059",
+                    "surface-tint": "#5b5b5b",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#dcddd9",
+                    "on-secondary": "#ffeef6",
+                    "on-primary-container": "#575757",
+                    "primary-container": "#ebebeb",
+                    "tertiary-container": "#ffff00",
+                    "error": "#b02500",
+                    "on-surface-variant": "#5a5c59",
+                    "inverse-primary": "#ffffff",
+                    "primary-dim": "#4f4f4f",
+                    "tertiary-fixed-dim": "#f0f000",
+                    "on-error-container": "#520c00",
+                    "on-surface": "#2d2f2d",
+                    "primary-fixed": "#ebebeb",
+                    "tertiary-fixed": "#ffff00",
+                    "on-secondary-fixed-variant": "#950085",
+                    "surface": "#f7f7f3",
+                    "surface-container-high": "#e2e3de",
+                    "secondary-fixed": "#ffbeeb",
+                    "surface-container": "#e8e9e4",
+                    "on-primary-fixed": "#444444",
+                    "on-tertiary": "#fbfb00",
+                    "outline-variant": "#adadaa",
+                    "error-dim": "#b92902",
+                    "inverse-on-surface": "#9c9d9a",
+                    "tertiary-dim": "#525200",
+                    "outline": "#767774",
+                    "primary-fixed-dim": "#dddddd",
+                    "on-tertiary-container": "#616100",
+                    "primary": "#5b5b5b",
+                    "on-error": "#ffefec",
+                    "secondary-container": "#ffbeeb",
+                    "on-background": "#2d2f2d",
+                    "on-tertiary-fixed": "#4e4e00",
+                    "error-container": "#f95630",
+                    "secondary": "#a80096",
+                    "surface-dim": "#d3d5d0",
+                    "on-primary-fixed-variant": "#616161",
+                    "tertiary": "#5f5f00",
+                    "background": "#f7f7f3",
+                    "on-tertiary-fixed-variant": "#6b6b00",
+                    "on-primary": "#f3f3f3",
+                    "secondary-fixed-dim": "#ffa8e7",
+                    "surface-bright": "#f7f7f3",
+                    "surface-container-low": "#f1f1ed",
+                    "on-secondary-container": "#850077"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Work Sans"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f7f7f3;
+            background-image: radial-gradient(#0d0f0d 1px, transparent 0);
+            background-size: 24px 24px;
+            background-attachment: fixed;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editable-indicator:hover {
+            outline: 2px dashed #a80096;
+            outline-offset: 4px;
+        }
+        [data-lang="en"] { display: none; }
+        .lang-en [data-lang="zh"] { display: none; }
+        .lang-en [data-lang="en"] { display: inline; }
+        .lang-en blockquote[data-lang="en"], 
+        .lang-en div[data-lang="en"], 
+        .lang-en p[data-lang="en"], 
+        .lang-en h1[data-lang="en"], 
+        .lang-en h2[data-lang="en"], 
+        .lang-en h3[data-lang="en"], 
+        .lang-en h4[data-lang="en"], 
+        .lang-en span[data-lang="en"],
+        .lang-en a[data-lang="en"] { display: block; }
+        .lang-en span[data-lang="en"].inline-block { display: inline-block; }
+        .lang-en span[data-lang="en"].inline { display: inline; }
+        .lang-en a[data-lang="en"].inline-block { display: inline-block; }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+/* Card flip */
+.card { perspective: 1000px; }
+.card-inner { transform-style: preserve-3d; transition: transform .3s; }
+.card:hover .card-inner { transform: rotateY(180deg); }
+.card-front, .card-back { backface-visibility: hidden; position: absolute; inset:0; }
+.card-back { transform: rotateY(180deg); }
+/* Parallax */
+.hero-bg { background-attachment: fixed; background-size: cover; }
+</style>
+</head>
+<body class="font-body text-on-surface" data-mode="connect">
+<!-- Header Navigation Shell -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-center items-center px-6 py-6 pointer-events-none">
+<nav class="pointer-events-auto flex justify-between items-center bg-[#f7f7f3] dark:bg-[#0d0f0d] border-4 border-[#0d0f0d] m-4 shadow-[4px_4px_0px_0px_#0d0f0d] px-6 py-3 w-full max-w-7xl">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-['Epilogue'] font-black uppercase tracking-tighter text-[#2d2f2d] dark:text-[#f7f7f3]">ARTIFACT.DEV</span>
+<div class="hidden md:flex gap-6">
+<a class="font-['Epilogue'] font-black uppercase tracking-tighter text-[#2d2f2d] dark:text-[#f7f7f3] hover:bg-[#ffff00] hover:translate-x-[2px] hover:translate-y-[2px] transition-all px-2" href="#"><span data-lang="zh">归档</span><span data-lang="en">Archive</span></a>
+<a class="font-['Epilogue'] font-black uppercase tracking-tighter text-[#a80096] underline decoration-4 underline-offset-4" href="#"><span data-lang="zh">实验室</span><span data-lang="en">Lab</span></a>
+<a class="font-['Epilogue'] font-black uppercase tracking-tighter text-[#2d2f2d] dark:text-[#f7f7f3] hover:bg-[#ffff00] hover:translate-x-[2px] hover:translate-y-[2px] transition-all px-2" href="#"><span data-lang="zh">笔记</span><span data-lang="en">Notes</span></a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<!-- Language Toggle -->
+<button class="flex items-center border-4 border-inverse-surface bg-surface-container-lowest shadow-[4px_4px_0px_0px_#0d0f0d] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all overflow-hidden h-10" id="lang-toggle">
+<span class="px-3 h-full flex items-center font-['Epilogue'] font-bold text-xs border-r-4 border-inverse-surface bg-tertiary-fixed text-inverse-surface" id="lang-indicator">ZH</span>
+<span class="px-3 h-full flex items-center font-['Epilogue'] font-bold text-xs text-inverse-surface opacity-40">EN</span>
+</button>
+<div class="flex items-center gap-2 bg-surface-container-high border-2 border-inverse-surface px-3 py-1">
+<span class="font-label text-xs font-bold uppercase">Dev Mode</span>
+<button class="w-10 h-5 bg-inverse-surface relative transition-colors" id="dev-mode-toggle">
+<div class="absolute left-1 top-1 w-3 h-3 bg-tertiary-fixed transition-all" id="dev-mode-knob"></div>
+</button>
+</div>
+<button class="material-symbols-outlined text-2xl p-1 border-2 border-inverse-surface hover:bg-tertiary-fixed active:translate-x-[2px] active:translate-y-[2px]">terminal</button>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-24">
+<div class="lg:col-span-8 flex flex-col justify-center">
+<h1 class="font-headline font-black text-5xl md:text-7xl lg:text-8xl leading-none tracking-tighter text-inverse-surface mb-8 editable-indicator"><span data-lang="zh">每一个看起来离经叛道的选择都让我很兴奋</span><span data-lang="en">Every unconventional choice fuels my excitement.</span></h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl editable-indicator"><span data-lang="zh">我是亮哥。正在构建一个数字化的、永恒的个人档案。在这里我记录关于技术、哲学与设计的深思。</span><span data-lang="en">I'm Liang Ge. Building a digital, eternal personal archive. Documenting deep thoughts on tech, philosophy, and design.</span></p>
+</div>
+<div class="lg:col-span-4">
+<!-- ID Card Component -->
+<div class="bg-surface-container-lowest border-4 border-inverse-surface shadow-[8px_8px_0px_0px_#0d0f0d] overflow-hidden transform lg:rotate-2">
+<div class="bg-[#4ade80] border-b-4 border-inverse-surface px-4 py-2 flex justify-between items-center">
+<span class="font-label font-bold text-inverse-surface uppercase">
+<span data-lang="zh">公民身份</span><span data-lang="en">Citizen Identity</span>
+</span>
+<span class="material-symbols-outlined text-inverse-surface">qr_code_2</span>
+</div>
+<div class="p-8">
+<div class="flex flex-col items-center mb-6">
+<div class="w-32 h-32 border-4 border-inverse-surface mb-4 overflow-hidden bg-surface-container">
+<img alt="Notion style avatar of a young man with glasses and a minimal black and white aesthetic" class="w-full h-full object-cover" data-alt="minimalist notion style digital avatar of a young man with circular glasses and tech-wear clothing, black and white clean line art" src="https://via.placeholder.com/400x400">
+</div>
+<h3 class="font-headline font-black text-2xl uppercase tracking-tighter editable-indicator">LIANG_GE.SYS</h3>
+<span class="font-label text-sm text-secondary font-bold">LVL. 99 ARCHITECT</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between border-b-2 border-surface-variant pb-1">
+<span class="font-label text-xs uppercase opacity-60"><span data-lang="zh">状态</span><span data-lang="en">Status</span></span>
+<span class="font-label text-xs font-bold uppercase"><span data-lang="zh">极度专注</span><span data-lang="en">Hyper-Focused</span></span>
+</div>
+<div class="flex justify-between border-b-2 border-surface-variant pb-1">
+<span class="font-label text-xs uppercase opacity-60"><span data-lang="zh">位置</span><span data-lang="en">Location</span></span>
+<span class="font-label text-xs font-bold uppercase">Shenzhen, CN</span>
+</div>
+<div class="flex justify-between">
+<span class="font-label text-xs uppercase opacity-60"><span data-lang="zh">最后上线</span><span data-lang="en">Last Seen</span></span>
+<span class="font-label text-xs font-bold uppercase"><span data-lang="zh">在实验室</span><span data-lang="en">In the Lab</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Plan Section -->
+<section id="plan" class="max-w-7xl mx-auto px-6 py-12">
+<h2 class="font-headline font-black text-4xl mb-6">个人规划</h2>
+<div id="plan-container" class="grid gap-6 md:grid-cols-2"></div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="max-w-7xl mx-auto px-6 py-12">
+<h2 class="font-headline font-black text-4xl mb-6">项目展示</h2>
+<div id="projects-container" class="grid gap-6 md:grid-cols-2"></div>
+</section>
+<!-- Quest Timeline Section -->
+<section class="mb-24">
+<div class="flex items-center gap-4 mb-12">
+<h2 class="font-headline font-black text-4xl uppercase tracking-tighter bg-tertiary-fixed border-4 border-inverse-surface px-4 py-1 shadow-[4px_4px_0px_0px_#0d0f0d] editable-indicator"><span data-lang="zh">进度日志</span><span data-lang="en">The Progress Log</span></h2>
+<div class="h-1 flex-grow bg-inverse-surface"></div>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8">
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 border-l-4 border-dashed border-inverse-surface -translate-x-1/2"></div>
+<div class="space-y-8">
+<h3 class="font-label font-bold text-lg uppercase bg-inverse-surface text-surface px-4 py-1 inline-block mb-4">主线任务</h3>
+<!-- Card 1 -->
+<div class="bg-[#fffdec] border-4 border-inverse-surface p-8 shadow-[6px_6px_0px_#000000] relative group hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-pointer">
+<span class="font-label text-xs font-bold text-secondary absolute top-4 right-6 uppercase">ACTIVE</span>
+<h4 class="font-headline font-bold text-xl mb-2 editable-indicator"><span data-lang="zh">ARTIFACT v2.0 系统重构</span><span data-lang="en">ARTIFACT v2.0 Refactor</span></h4>
+<p class="font-body text-sm text-on-surface-variant editable-indicator"><span data-lang="zh">使用 Neo-Brutalism 重新定义个人品牌视觉语言，集成动态内容管理系统。</span><span data-lang="en">Redefining personal brand visual language using Neo-Brutalism, integrating a dynamic CMS.</span></p>
+</div>
+<!-- Card 2 -->
+<div class="bg-[#fffdec] border-4 border-inverse-surface p-8 shadow-[6px_6px_0px_#000000] opacity-60 relative group hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-pointer">
+<span class="font-label text-xs font-bold text-outline absolute top-4 right-6 uppercase">ARCHIVED</span>
+<h4 class="font-headline font-bold text-xl mb-2"><span data-lang="zh">全自动化交易终端</span><span data-lang="en">Automated Trading Terminal</span></h4>
+<p class="font-body text-sm text-on-surface-variant"><span data-lang="zh">基于 Python 的高频交易接口封装，支持多交易所并行处理。</span><span data-lang="en">Python-based high-frequency trading API wrapper, supporting multi-exchange parallel processing.</span></p>
+</div>
+</div>
+<div class="space-y-8 md:mt-20">
+<h3 class="font-label font-bold text-lg uppercase bg-[#4ade80] text-inverse-surface border-4 border-inverse-surface px-4 py-1 inline-block mb-4">支线任务</h3>
+<!-- Card 3 -->
+<div class="bg-[#f0f4f8] border-4 border-inverse-surface p-8 shadow-[6px_6px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-pointer relative">
+<span class="font-label text-xs font-bold text-on-tertiary-container bg-tertiary-fixed px-2 mb-2 inline-block">ONGOING</span>
+<h4 class="font-headline font-bold text-xl mb-2 editable-indicator"><span data-lang="zh">每周阅读：现代政治哲学</span><span data-lang="en">Weekly Reading: Modern Philosophy</span></h4>
+<p class="font-body text-sm text-on-surface-variant editable-indicator"><span data-lang="zh">探索社会契约论的现代演变及其在去中心化社会中的应用。</span><span data-lang="en">Exploring the modern evolution of social contract theory and its application in decentralized societies.</span></p>
+</div>
+<!-- Card 4 -->
+<div class="bg-[#f0f4f8] border-4 border-inverse-surface p-8 shadow-[6px_6px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-pointer relative">
+<span class="font-label text-xs font-bold text-on-tertiary-container bg-tertiary-fixed px-2 mb-2 inline-block">PENDING</span>
+<h4 class="font-headline font-bold text-xl mb-2"><span data-lang="zh">极简咖啡工作站组建</span><span data-lang="en">Minimalist Coffee Station</span></h4>
+<p class="font-body text-sm text-on-surface-variant"><span data-lang="zh">寻找完美的 E61 冲煮头机器并优化豆仓动线。</span><span data-lang="en">Finding the perfect E61 brew group machine and optimizing bean workflow.</span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Projects Section -->
+<section class="mb-24">
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 grid-rows-auto gap-6">
+<!-- Large Project -->
+<div class="md:col-span-2 lg:col-span-3 bg-secondary border-4 border-inverse-surface p-10 shadow-[8px_8px_0px_0px_#0d0f0d] flex flex-col justify-between min-h-[350px]">
+<div>
+<div class="flex gap-2 mb-6">
+<span class="bg-surface text-inverse-surface px-2 py-1 font-label text-xs font-bold uppercase">开源</span>
+<span class="bg-surface text-inverse-surface px-2 py-1 font-label text-xs font-bold uppercase">React</span>
+</div>
+<h3 class="font-headline font-black text-4xl text-surface uppercase leading-none mb-4 editable-indicator">TIME MANAGEMENT BOARD</h3>
+<p class="font-body text-surface opacity-90 max-w-xs mb-8 editable-indicator">重新定义的数字看板，结合番茄钟与艾森豪威尔矩阵的效能工具。</p>
+</div>
+<button class="bg-tertiary-fixed border-4 border-inverse-surface py-3 px-6 font-label font-black uppercase text-inverse-surface self-start hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none shadow-[4px_4px_0px_0px_#0d0f0d] transition-all"><span data-lang="zh">查看项目</span><span data-lang="en">VIEW PROJECT</span></button>
+</div>
+<!-- Current Reading -->
+<div class="md:col-span-2 lg:col-span-3 bg-surface-container-lowest border-4 border-inverse-surface p-10 shadow-[8px_8px_0px_0px_#0d0f0d]">
+<h3 class="font-label font-bold text-xs uppercase mb-6 opacity-60">当前阅读</h3>
+<div class="flex gap-6 items-start">
+<div class="w-24 h-32 border-4 border-inverse-surface flex-shrink-0 shadow-[4px_4px_0px_0px_#0d0f0d]">
+<img alt="Cover of a philosophy book with bold minimalist graphic design" class="w-full h-full object-cover" data-alt="minimalist graphic book cover with high contrast geometric shapes and bold serif typography on archival paper texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDroyGstdsEyUmVEFmcR4FW-uKZdG5L7EAnfXayPStrN_rc-8scSgGB-XH2clSGGWTPNIAeN1fLH0r-eK3es9wYiI9JEWB9wEP7p5jwsK2thLNfhQ2cFtE110gnpjP6KxZgQ492stvEG7WnTHEz-182n0IddY6hUyC7uemjzKV1VkZ9GVtFLlGeeICSuxnrw0poEwkBUi1ywOTK2k_vL84z6j093cRSSi7pXiENZgwLVGnoxuZgR4moUHQbe-6WpTJRNVAPZ0kxc0"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-xl mb-1 editable-indicator">存在与虚无</h4>
+<span class="font-label text-xs text-secondary font-bold">Jean-Paul Sartre</span>
+<div class="w-full bg-surface-container-high h-4 border-2 border-inverse-surface relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 bg-[#4ade80] w-[65%]"></div>
+</div>
+<span class="font-label text-[10px] mt-1 block"><span data-lang="zh">已完成 65%</span><span data-lang="en">65% COMPLETED</span></span>
+</div>
+</div>
+</div>
+<!-- Small Grid Items -->
+<div class="md:col-span-2 lg:col-span-2 bg-tertiary-fixed border-4 border-inverse-surface p-10">
+<h3 class="font-label font-bold text-xs uppercase mb-4">核心数据</h3>
+<div class="flex flex-col gap-6">
+<div class="flex justify-between items-end border-b-2 border-inverse-surface pb-4">
+<span class="font-body text-sm"><span data-lang="zh">活跃用户</span><span data-lang="en">Active Users</span></span>
+<span class="font-headline font-black text-3xl tracking-tighter">12.4K</span>
+</div>
+<div class="flex justify-between items-end">
+<span class="font-body text-sm"><span data-lang="zh">运行时间</span><span data-lang="en">System Uptime</span></span>
+<span class="font-headline font-black text-3xl tracking-tighter">99.9%</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 lg:col-span-2 bg-surface-container-low border-4 border-inverse-surface p-10 flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined text-5xl mb-2" style="font-variation-settings: 'FILL' 1;">rss_feed</span>
+<h4 class="font-headline font-bold text-lg uppercase tracking-tighter">订阅日志</h4>
+<div class="mt-4 flex border-4 border-inverse-surface">
+<input class="bg-transparent border-none focus:ring-0 font-label text-xs w-full px-3" placeholder="EMAIL" type="text"/>
+<button class="bg-inverse-surface text-surface px-4 py-2 font-label text-xs font-bold uppercase active:scale-95 transition-transform"><span data-lang="zh">加入</span><span data-lang="en">JOIN</span></button>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 lg:col-span-2 bg-[#0d0f0d] text-surface p-10 border-4 border-inverse-surface shadow-[8px_8px_0px_0px_#0d0f0d] flex flex-col justify-between">
+<span class="font-label text-xs font-bold text-[#4ade80]">SYSTEM_STATUS: OK</span>
+<div class="mt-4">
+<p class="font-body text-xs leading-relaxed opacity-70"><span data-lang="zh">Artifact.dev 是思想与代码的数字仓库。建立在永恒与清晰的原则之上。</span><span data-lang="en">Artifact.dev is a digital repository of thoughts and code. Built on the principles of permanence and clarity.</span></p>
+</div>
+<div class="mt-4 flex gap-2">
+<div class="w-2 h-2 bg-[#4ade80] rounded-full animate-pulse"></div>
+<span class="font-label text-[10px] uppercase"><span data-lang="zh">来自 深圳 现场</span><span data-lang="en">Live from SZ</span></span>
+</div>
+</div>
+</div>
+</section>
+<footer class="w-full mt-20 p-8 flex flex-col items-center gap-12 bg-[#f7f7f3] dark:bg-[#0d0f0d] border-t-4 border-[#0d0f0d]">
+<div class="w-full max-w-7xl flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+<div class="flex flex-col gap-6">
+<h3 class="font-headline font-black text-3xl uppercase tracking-tighter editable-indicator">通用入口</h3>
+<div class="flex flex-wrap gap-3">
+<a class="border-4 border-[#0d0f0d] px-4 py-2 bg-[#ffff00] inline-block font-['Space_Grotesk'] text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0d0f0d] hover:bg-[#a80096] hover:text-white transition-colors cursor-pointer active:scale-95" href="#"><span data-lang="zh">根目录</span><span data-lang="en">Root</span></a>
+<a class="border-4 border-[#0d0f0d] px-4 py-2 bg-[#f7f7f3] inline-block font-['Space_Grotesk'] text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0d0f0d] hover:bg-[#a80096] hover:text-white transition-colors cursor-pointer active:scale-95" href="#"><span data-lang="zh">系统</span><span data-lang="en">System</span></a>
+<a class="border-4 border-[#0d0f0d] px-4 py-2 bg-[#f7f7f3] inline-block font-['Space_Grotesk'] text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0d0f0d] hover:bg-[#a80096] hover:text-white transition-colors cursor-pointer active:scale-95" href="#"><span data-lang="zh">日志</span><span data-lang="en">Logs</span></a>
+<a class="border-4 border-[#0d0f0d] px-4 py-2 bg-[#f7f7f3] inline-block font-['Space_Grotesk'] text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0d0f0d] hover:bg-[#a80096] hover:text-white transition-colors cursor-pointer active:scale-95" href="#">GitHub</a>
+<a class="border-4 border-[#0d0f0d] px-4 py-2 bg-[#f7f7f3] inline-block font-['Space_Grotesk'] text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0d0f0d] hover:bg-[#a80096] hover:text-white transition-colors cursor-pointer active:scale-95" href="#"><span data-lang="zh">镜像</span><span data-lang="en">Mirror</span></a>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="font-label text-sm font-bold uppercase text-[#0d0f0d]">©2024 PERMANENT_COLLECTION</span>
+<span class="font-label text-[10px] opacity-40">ESTABLISHED IN MMXIX</span>
+</div>
+</div>
+</footer>
+<script>
+    // Language Toggle logic
+    const langToggle = document.getElementById('lang-toggle');
+    const langIndicator = document.getElementById('lang-indicator');
+    const langSpans = langToggle.querySelectorAll('span');
+    let currentLang = 'zh';
+
+    langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'zh' ? 'en' : 'zh';
+        document.body.classList.toggle('lang-en', currentLang === 'en');
+        
+        // Update button UI
+        if (currentLang === 'en') {
+            langSpans[0].classList.remove('bg-tertiary-fixed', 'opacity-100', 'border-r-4');
+            langSpans[0].classList.add('opacity-40');
+            langSpans[1].classList.remove('opacity-40');
+            langSpans[1].classList.add('bg-tertiary-fixed', 'opacity-100', 'border-l-4', 'border-inverse-surface');
+        } else {
+            langSpans[1].classList.remove('bg-tertiary-fixed', 'opacity-100', 'border-l-4');
+            langSpans[1].classList.add('opacity-40');
+            langSpans[0].classList.remove('opacity-40');
+            langSpans[0].classList.add('bg-tertiary-fixed', 'opacity-100', 'border-r-4', 'border-inverse-surface');
+        }
+    });
+
+    // Dev Mode logic
+    const devModeToggle = document.getElementById('dev-mode-toggle');
+    const devModeKnob = document.getElementById('dev-mode-knob');
+    const editableElements = document.querySelectorAll('.editable-indicator');
+    let devModeActive = false;
+
+    devModeToggle.addEventListener('click', () => {
+        devModeActive = !devModeActive;
+        devModeKnob.style.left = devModeActive ? 'calc(100% - 0.75rem - 4px)' : '4px';
+        
+        editableElements.forEach(el => {
+            el.setAttribute('contenteditable', devModeActive.toString());
+            if (devModeActive) {
+                el.classList.add('outline-2', 'outline-dashed', 'outline-[#a80096]', 'outline-offset-4');
+            } else {
+                el.classList.remove('outline-2', 'outline-dashed', 'outline-[#a80096]', 'outline-offset-4');
+            }
+        });
+    });
+    /* Render blog JSON */
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/data/blog.json')
+        .then(r => r.json())
+        .then(items => {
+          const plan = document.getElementById('plan-container');
+          const proj = document.getElementById('projects-container');
+          items.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'card border-4 border-inverse-surface shadow-[4px_4px_0px_0px_#0d0f0d] overflow-hidden';
+            card.innerHTML = `
+              <div class="card-inner relative transition-transform duration-300">
+                <div class="card-front p-4">
+                  <h3 class="font-headline font-black text-xl mb-2">${item.title}</h3>
+                  <div class="content">${item.content}</div>
+                </div>
+                <div class="card-back p-4 bg-[#fffdec] hidden"></div>
+              </div>`;
+            if (item.tags.includes('规划')) plan.appendChild(card);
+            else if (item.tags.includes('项目')) proj.appendChild(card);
+          });
+        })
+        .catch(err => console.error('Failed to load blog data', err));
+    });
+</script>
+</body>
+</html>
