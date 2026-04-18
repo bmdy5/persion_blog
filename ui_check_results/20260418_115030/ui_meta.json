@@ -1,0 +1,129 @@
+{
+  "screenshots": [
+    {
+      "device": "PC",
+      "path": ".cache/screenshot_PC.png"
+    },
+    {
+      "device": "Mobile",
+      "path": ".cache/screenshot_Mobile.png"
+    }
+  ],
+  "interactions": [
+    {
+      "name": "归档",
+      "path": ".cache/interaction_0.png"
+    },
+    {
+      "name": "实验室",
+      "path": ".cache/interaction_1.png"
+    },
+    {
+      "name": "笔记",
+      "path": ".cache/interaction_2.png"
+    }
+  ],
+  "meta": {
+    "images": [
+      {
+        "src": "file:///Users/xiaofeng/Documents/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260418000615_536_1.png",
+        "alt": "Avatar",
+        "loaded": true
+      },
+      {
+        "src": "file:///Users/xiaofeng/Documents/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260417230649_534_1.jpg",
+        "alt": "个人生活照 1",
+        "loaded": true
+      },
+      {
+        "src": "file:///Users/xiaofeng/Documents/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260417230645_530_1.jpg",
+        "alt": "个人生活照 2",
+        "loaded": true
+      },
+      {
+        "src": "file:///Users/xiaofeng/Documents/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260417230646_531_1.jpg",
+        "alt": "个人生活照 3",
+        "loaded": true
+      },
+      {
+        "src": "file:///Users/xiaofeng/Documents/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/img/tools/openmaid.svg",
+        "alt": "OpenMaid",
+        "loaded": true
+      },
+      {
+        "src": "file:///Users/xiaofeng/Documents/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/img/tools/buffett.svg",
+        "alt": "Buffett Letters",
+        "loaded": true
+      },
+      {
+        "src": "file:///Users/xiaofeng/Documents/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/img/tools/notebooklm.svg",
+        "alt": "NotebookLM",
+        "loaded": true
+      },
+      {
+        "src": "file:///Users/xiaofeng/Documents/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/img/tools/stitch.svg",
+        "alt": "Stitch",
+        "loaded": true
+      },
+      {
+        "src": "file:///Users/xiaofeng/Documents/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/img/tools/jetbrains.svg",
+        "alt": "JetBrains",
+        "loaded": true
+      }
+    ],
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "每一个看起来离经叛道的选择都让我很兴奋"
+      },
+      {
+        "tag": "H3",
+        "text": "LIANG_GE.SYS"
+      },
+      {
+        "tag": "H3",
+        "text": "TIME MANAGEMENT BOARD"
+      },
+      {
+        "tag": "H3",
+        "text": "探索记忆 / EXPLORE MEMORY"
+      },
+      {
+        "tag": "H4",
+        "text": "MY GALLERY"
+      },
+      {
+        "tag": "H3",
+        "text": "当前阅读"
+      },
+      {
+        "tag": "H4",
+        "text": "存在与虚无"
+      },
+      {
+        "tag": "H3",
+        "text": "SYSTEM_STATUS: OK"
+      },
+      {
+        "tag": "H2",
+        "text": "常用工具 / TOOLS"
+      },
+      {
+        "tag": "H3",
+        "text": "通用入口"
+      }
+    ],
+    "maxZ": 50,
+    "gaps": [
+      "normal",
+      "32px",
+      "24px",
+      "16px",
+      "8px",
+      "4px",
+      "12px",
+      "48px"
+    ],
+    "smallInputs": 0
+  }
+}

@@ -1,400 +1,573 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="dark">
+
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Liang Ge – Personal Blog</title>
-<meta name="description" content="Personal blog showcasing planning, projects, and thoughts.">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&family=Work+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "secondary-dim": "#940084",
-                    "inverse-surface": "#0d0f0d",
-                    "surface-variant": "#dcddd9",
-                    "on-secondary-fixed": "#640059",
-                    "surface-tint": "#5b5b5b",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-container-highest": "#dcddd9",
-                    "on-secondary": "#ffeef6",
-                    "on-primary-container": "#575757",
-                    "primary-container": "#ebebeb",
-                    "tertiary-container": "#ffff00",
-                    "error": "#b02500",
-                    "on-surface-variant": "#5a5c59",
-                    "inverse-primary": "#ffffff",
-                    "primary-dim": "#4f4f4f",
-                    "tertiary-fixed-dim": "#f0f000",
-                    "on-error-container": "#520c00",
-                    "on-surface": "#2d2f2d",
-                    "primary-fixed": "#ebebeb",
-                    "tertiary-fixed": "#ffff00",
-                    "on-secondary-fixed-variant": "#950085",
-                    "surface": "#f7f7f3",
-                    "surface-container-high": "#e2e3de",
-                    "secondary-fixed": "#ffbeeb",
-                    "surface-container": "#e8e9e4",
-                    "on-primary-fixed": "#444444",
-                    "on-tertiary": "#fbfb00",
-                    "outline-variant": "#adadaa",
-                    "error-dim": "#b92902",
-                    "inverse-on-surface": "#9c9d9a",
-                    "tertiary-dim": "#525200",
-                    "outline": "#767774",
-                    "primary-fixed-dim": "#dddddd",
-                    "on-tertiary-container": "#616100",
-                    "primary": "#5b5b5b",
-                    "on-error": "#ffefec",
-                    "secondary-container": "#ffbeeb",
-                    "on-background": "#2d2f2d",
-                    "on-tertiary-fixed": "#4e4e00",
-                    "error-container": "#f95630",
-                    "secondary": "#a80096",
-                    "surface-dim": "#d3d5d0",
-                    "on-primary-fixed-variant": "#616161",
-                    "tertiary": "#5f5f00",
-                    "background": "#f7f7f3",
-                    "on-tertiary-fixed-variant": "#6b6b00",
-                    "on-primary": "#f3f3f3",
-                    "secondary-fixed-dim": "#ffa8e7",
-                    "surface-bright": "#f7f7f3",
-                    "surface-container-low": "#f1f1ed",
-                    "on-secondary-container": "#850077"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "0px",
-                    "xl": "0px",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Epilogue"],
-                    "body": ["Work Sans"],
-                    "label": ["Space Grotesk"]
-            }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Liang Ge – Curation & Code</title>
+  <meta name="description" content="Personal archive of thoughts, experiments, and digital craftsmanship.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#0a0a0b",
+            surface: "#161618",
+            "surface-lighter": "#222225",
+            primary: "#6366f1",
+            secondary: "#ec4899",
+            accent: "#06b6d4",
+            "on-surface": "#e4e4e7",
+            "on-surface-muted": "#a1a1aa",
+            outline: "#27272a"
           },
+          fontFamily: {
+            headline: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          },
+          borderRadius: {
+            "2xl": "1rem",
+            "3xl": "1.5rem"
+          }
         },
+      },
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0a0a0b;
+      color: #e4e4e7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .glass {
+      background: rgba(22, 22, 24, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .text-glow {
+      text-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    [data-lang="en"] {
+      display: none;
+    }
+
+    .lang-en [data-lang="zh"] {
+      display: none;
+    }
+
+    .lang-en [data-lang="en"] {
+      display: inline;
+    }
+
+    .lang-en blockquote[data-lang="en"],
+    .lang-en div[data-lang="en"],
+    .lang-en p[data-lang="en"],
+    .lang-en h1[data-lang="en"],
+    .lang-en h2[data-lang="en"],
+    .lang-en h3[data-lang="en"],
+    .lang-en h4[data-lang="en"],
+    .lang-en span[data-lang="en"],
+    .lang-en a[data-lang="en"] {
+      display: block;
+    }
+
+    /* Animation */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
       }
-    </script>
-<style>
-        body {
-            background-color: #f7f7f3;
-            background-image: radial-gradient(#0d0f0d 1px, transparent 0);
-            background-size: 24px 24px;
-            background-attachment: fixed;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .editable-indicator:hover {
-            outline: 2px dashed #a80096;
-            outline-offset: 4px;
-        }
-        [data-lang="en"] { display: none; }
-        .lang-en [data-lang="zh"] { display: none; }
-        .lang-en [data-lang="en"] { display: inline; }
-        .lang-en blockquote[data-lang="en"], 
-        .lang-en div[data-lang="en"], 
-        .lang-en p[data-lang="en"], 
-        .lang-en h1[data-lang="en"], 
-        .lang-en h2[data-lang="en"], 
-        .lang-en h3[data-lang="en"], 
-        .lang-en h4[data-lang="en"], 
-        .lang-en span[data-lang="en"],
-        .lang-en a[data-lang="en"] { display: block; }
-        .lang-en span[data-lang="en"].inline-block { display: inline-block; }
-        .lang-en span[data-lang="en"].inline { display: inline; }
-        .lang-en a[data-lang="en"].inline-block { display: inline-block; }
-    </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
-/* Card flip */
-.card { perspective: 1000px; }
-.card-inner { transform-style: preserve-3d; transition: transform .3s; }
-.card:hover .card-inner { transform: rotateY(180deg); }
-.card-front, .card-back { backface-visibility: hidden; position: absolute; inset:0; }
-.card-back { transform: rotateY(180deg); }
-/* Parallax */
-.hero-bg { background-attachment: fixed; background-size: cover; }
-</style>
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+  </style>
 </head>
-<body class="font-body text-on-surface" data-mode="connect">
-<!-- Header Navigation Shell -->
-<header class="fixed top-0 left-0 right-0 z-50 flex justify-center items-center px-6 py-6 pointer-events-none">
-<nav class="pointer-events-auto flex justify-between items-center bg-[#f7f7f3] dark:bg-[#0d0f0d] border-4 border-[#0d0f0d] m-4 shadow-[4px_4px_0px_0px_#0d0f0d] px-6 py-3 w-full max-w-7xl">
-<div class="flex items-center gap-8">
-<span class="text-2xl font-['Epilogue'] font-black uppercase tracking-tighter text-[#2d2f2d] dark:text-[#f7f7f3]">ARTIFACT.DEV</span>
-<div class="hidden md:flex gap-6">
-<a class="font-['Epilogue'] font-black uppercase tracking-tighter text-[#2d2f2d] dark:text-[#f7f7f3] hover:bg-[#ffff00] hover:translate-x-[2px] hover:translate-y-[2px] transition-all px-2" href="#"><span data-lang="zh">归档</span><span data-lang="en">Archive</span></a>
-<a class="font-['Epilogue'] font-black uppercase tracking-tighter text-[#a80096] underline decoration-4 underline-offset-4" href="#"><span data-lang="zh">实验室</span><span data-lang="en">Lab</span></a>
-<a class="font-['Epilogue'] font-black uppercase tracking-tighter text-[#2d2f2d] dark:text-[#f7f7f3] hover:bg-[#ffff00] hover:translate-x-[2px] hover:translate-y-[2px] transition-all px-2" href="#"><span data-lang="zh">笔记</span><span data-lang="en">Notes</span></a>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<!-- Language Toggle -->
-<button class="flex items-center border-4 border-inverse-surface bg-surface-container-lowest shadow-[4px_4px_0px_0px_#0d0f0d] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all overflow-hidden h-10" id="lang-toggle">
-<span class="px-3 h-full flex items-center font-['Epilogue'] font-bold text-xs border-r-4 border-inverse-surface bg-tertiary-fixed text-inverse-surface" id="lang-indicator">ZH</span>
-<span class="px-3 h-full flex items-center font-['Epilogue'] font-bold text-xs text-inverse-surface opacity-40">EN</span>
-</button>
-<div class="flex items-center gap-2 bg-surface-container-high border-2 border-inverse-surface px-3 py-1">
-<span class="font-label text-xs font-bold uppercase">Dev Mode</span>
-<button class="w-10 h-5 bg-inverse-surface relative transition-colors" id="dev-mode-toggle">
-<div class="absolute left-1 top-1 w-3 h-3 bg-tertiary-fixed transition-all" id="dev-mode-knob"></div>
-</button>
-</div>
-<button class="material-symbols-outlined text-2xl p-1 border-2 border-inverse-surface hover:bg-tertiary-fixed active:translate-x-[2px] active:translate-y-[2px]">terminal</button>
-</div>
-</nav>
-</header>
-<main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
-<!-- Hero Section -->
-<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-24">
-<div class="lg:col-span-8 flex flex-col justify-center">
-<h1 class="font-headline font-black text-5xl md:text-7xl lg:text-8xl leading-none tracking-tighter text-inverse-surface mb-8 editable-indicator"><span data-lang="zh">每一个看起来离经叛道的选择都让我很兴奋</span><span data-lang="en">Every unconventional choice fuels my excitement.</span></h1>
-<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl editable-indicator"><span data-lang="zh">我是亮哥。正在构建一个数字化的、永恒的个人档案。在这里我记录关于技术、哲学与设计的深思。</span><span data-lang="en">I'm Liang Ge. Building a digital, eternal personal archive. Documenting deep thoughts on tech, philosophy, and design.</span></p>
-</div>
-<div class="lg:col-span-4">
-<!-- ID Card Component -->
-<div class="bg-surface-container-lowest border-4 border-inverse-surface shadow-[8px_8px_0px_0px_#0d0f0d] overflow-hidden transform lg:rotate-2">
-<div class="bg-[#4ade80] border-b-4 border-inverse-surface px-4 py-2 flex justify-between items-center">
-<span class="font-label font-bold text-inverse-surface uppercase">
-<span data-lang="zh">公民身份</span><span data-lang="en">Citizen Identity</span>
-</span>
-<span class="material-symbols-outlined text-inverse-surface">qr_code_2</span>
-</div>
-<div class="p-8">
-<div class="flex flex-col items-center mb-6">
-<div class="w-32 h-32 border-4 border-inverse-surface mb-4 overflow-hidden bg-surface-container">
-<img alt="Notion style avatar of a young man with glasses and a minimal black and white aesthetic" class="w-full h-full object-cover" data-alt="minimalist notion style digital avatar of a young man with circular glasses and tech-wear clothing, black and white clean line art" src="https://via.placeholder.com/400x400">
-</div>
-<h3 class="font-headline font-black text-2xl uppercase tracking-tighter editable-indicator">LIANG_GE.SYS</h3>
-<span class="font-label text-sm text-secondary font-bold">LVL. 99 ARCHITECT</span>
-</div>
-<div class="space-y-2">
-<div class="flex justify-between border-b-2 border-surface-variant pb-1">
-<span class="font-label text-xs uppercase opacity-60"><span data-lang="zh">状态</span><span data-lang="en">Status</span></span>
-<span class="font-label text-xs font-bold uppercase"><span data-lang="zh">极度专注</span><span data-lang="en">Hyper-Focused</span></span>
-</div>
-<div class="flex justify-between border-b-2 border-surface-variant pb-1">
-<span class="font-label text-xs uppercase opacity-60"><span data-lang="zh">位置</span><span data-lang="en">Location</span></span>
-<span class="font-label text-xs font-bold uppercase">Shenzhen, CN</span>
-</div>
-<div class="flex justify-between">
-<span class="font-label text-xs uppercase opacity-60"><span data-lang="zh">最后上线</span><span data-lang="en">Last Seen</span></span>
-<span class="font-label text-xs font-bold uppercase"><span data-lang="zh">在实验室</span><span data-lang="en">In the Lab</span></span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Plan Section -->
-<section id="plan" class="max-w-7xl mx-auto px-6 py-12">
-<h2 class="font-headline font-black text-4xl mb-6">个人规划</h2>
-<div id="plan-container" class="grid gap-6 md:grid-cols-2"></div>
-</section>
-<!-- Projects Section -->
-<section id="projects" class="max-w-7xl mx-auto px-6 py-12">
-<h2 class="font-headline font-black text-4xl mb-6">项目展示</h2>
-<div id="projects-container" class="grid gap-6 md:grid-cols-2"></div>
-</section>
-<!-- Quest Timeline Section -->
-<section class="mb-24">
-<div class="flex items-center gap-4 mb-12">
-<h2 class="font-headline font-black text-4xl uppercase tracking-tighter bg-tertiary-fixed border-4 border-inverse-surface px-4 py-1 shadow-[4px_4px_0px_0px_#0d0f0d] editable-indicator"><span data-lang="zh">进度日志</span><span data-lang="en">The Progress Log</span></h2>
-<div class="h-1 flex-grow bg-inverse-surface"></div>
-</div>
-<div class="relative grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8">
-<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 border-l-4 border-dashed border-inverse-surface -translate-x-1/2"></div>
-<div class="space-y-8">
-<h3 class="font-label font-bold text-lg uppercase bg-inverse-surface text-surface px-4 py-1 inline-block mb-4">主线任务</h3>
-<!-- Card 1 -->
-<div class="bg-[#fffdec] border-4 border-inverse-surface p-8 shadow-[6px_6px_0px_#000000] relative group hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-pointer">
-<span class="font-label text-xs font-bold text-secondary absolute top-4 right-6 uppercase">ACTIVE</span>
-<h4 class="font-headline font-bold text-xl mb-2 editable-indicator"><span data-lang="zh">ARTIFACT v2.0 系统重构</span><span data-lang="en">ARTIFACT v2.0 Refactor</span></h4>
-<p class="font-body text-sm text-on-surface-variant editable-indicator"><span data-lang="zh">使用 Neo-Brutalism 重新定义个人品牌视觉语言，集成动态内容管理系统。</span><span data-lang="en">Redefining personal brand visual language using Neo-Brutalism, integrating a dynamic CMS.</span></p>
-</div>
-<!-- Card 2 -->
-<div class="bg-[#fffdec] border-4 border-inverse-surface p-8 shadow-[6px_6px_0px_#000000] opacity-60 relative group hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-pointer">
-<span class="font-label text-xs font-bold text-outline absolute top-4 right-6 uppercase">ARCHIVED</span>
-<h4 class="font-headline font-bold text-xl mb-2"><span data-lang="zh">全自动化交易终端</span><span data-lang="en">Automated Trading Terminal</span></h4>
-<p class="font-body text-sm text-on-surface-variant"><span data-lang="zh">基于 Python 的高频交易接口封装，支持多交易所并行处理。</span><span data-lang="en">Python-based high-frequency trading API wrapper, supporting multi-exchange parallel processing.</span></p>
-</div>
-</div>
-<div class="space-y-8 md:mt-20">
-<h3 class="font-label font-bold text-lg uppercase bg-[#4ade80] text-inverse-surface border-4 border-inverse-surface px-4 py-1 inline-block mb-4">支线任务</h3>
-<!-- Card 3 -->
-<div class="bg-[#f0f4f8] border-4 border-inverse-surface p-8 shadow-[6px_6px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-pointer relative">
-<span class="font-label text-xs font-bold text-on-tertiary-container bg-tertiary-fixed px-2 mb-2 inline-block">ONGOING</span>
-<h4 class="font-headline font-bold text-xl mb-2 editable-indicator"><span data-lang="zh">每周阅读：现代政治哲学</span><span data-lang="en">Weekly Reading: Modern Philosophy</span></h4>
-<p class="font-body text-sm text-on-surface-variant editable-indicator"><span data-lang="zh">探索社会契约论的现代演变及其在去中心化社会中的应用。</span><span data-lang="en">Exploring the modern evolution of social contract theory and its application in decentralized societies.</span></p>
-</div>
-<!-- Card 4 -->
-<div class="bg-[#f0f4f8] border-4 border-inverse-surface p-8 shadow-[6px_6px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-pointer relative">
-<span class="font-label text-xs font-bold text-on-tertiary-container bg-tertiary-fixed px-2 mb-2 inline-block">PENDING</span>
-<h4 class="font-headline font-bold text-xl mb-2"><span data-lang="zh">极简咖啡工作站组建</span><span data-lang="en">Minimalist Coffee Station</span></h4>
-<p class="font-body text-sm text-on-surface-variant"><span data-lang="zh">寻找完美的 E61 冲煮头机器并优化豆仓动线。</span><span data-lang="en">Finding the perfect E61 brew group machine and optimizing bean workflow.</span></p>
-</div>
-</div>
-</div>
-</section>
-<!-- Bento Grid Projects Section -->
-<section class="mb-24">
-<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 grid-rows-auto gap-6">
-<!-- Large Project -->
-<div class="md:col-span-2 lg:col-span-3 bg-secondary border-4 border-inverse-surface p-10 shadow-[8px_8px_0px_0px_#0d0f0d] flex flex-col justify-between min-h-[350px]">
-<div>
-<div class="flex gap-2 mb-6">
-<span class="bg-surface text-inverse-surface px-2 py-1 font-label text-xs font-bold uppercase">开源</span>
-<span class="bg-surface text-inverse-surface px-2 py-1 font-label text-xs font-bold uppercase">React</span>
-</div>
-<h3 class="font-headline font-black text-4xl text-surface uppercase leading-none mb-4 editable-indicator">TIME MANAGEMENT BOARD</h3>
-<p class="font-body text-surface opacity-90 max-w-xs mb-8 editable-indicator">重新定义的数字看板，结合番茄钟与艾森豪威尔矩阵的效能工具。</p>
-</div>
-<button class="bg-tertiary-fixed border-4 border-inverse-surface py-3 px-6 font-label font-black uppercase text-inverse-surface self-start hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none shadow-[4px_4px_0px_0px_#0d0f0d] transition-all"><span data-lang="zh">查看项目</span><span data-lang="en">VIEW PROJECT</span></button>
-</div>
-<!-- Current Reading -->
-<div class="md:col-span-2 lg:col-span-3 bg-surface-container-lowest border-4 border-inverse-surface p-10 shadow-[8px_8px_0px_0px_#0d0f0d]">
-<h3 class="font-label font-bold text-xs uppercase mb-6 opacity-60">当前阅读</h3>
-<div class="flex gap-6 items-start">
-<div class="w-24 h-32 border-4 border-inverse-surface flex-shrink-0 shadow-[4px_4px_0px_0px_#0d0f0d]">
-<img alt="Cover of a philosophy book with bold minimalist graphic design" class="w-full h-full object-cover" data-alt="minimalist graphic book cover with high contrast geometric shapes and bold serif typography on archival paper texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDroyGstdsEyUmVEFmcR4FW-uKZdG5L7EAnfXayPStrN_rc-8scSgGB-XH2clSGGWTPNIAeN1fLH0r-eK3es9wYiI9JEWB9wEP7p5jwsK2thLNfhQ2cFtE110gnpjP6KxZgQ492stvEG7WnTHEz-182n0IddY6hUyC7uemjzKV1VkZ9GVtFLlGeeICSuxnrw0poEwkBUi1ywOTK2k_vL84z6j093cRSSi7pXiENZgwLVGnoxuZgR4moUHQbe-6WpTJRNVAPZ0kxc0"/>
-</div>
-<div>
-<h4 class="font-headline font-bold text-xl mb-1 editable-indicator">存在与虚无</h4>
-<span class="font-label text-xs text-secondary font-bold">Jean-Paul Sartre</span>
-<div class="w-full bg-surface-container-high h-4 border-2 border-inverse-surface relative overflow-hidden">
-<div class="absolute inset-y-0 left-0 bg-[#4ade80] w-[65%]"></div>
-</div>
-<span class="font-label text-[10px] mt-1 block"><span data-lang="zh">已完成 65%</span><span data-lang="en">65% COMPLETED</span></span>
-</div>
-</div>
-</div>
-<!-- Small Grid Items -->
-<div class="md:col-span-2 lg:col-span-2 bg-tertiary-fixed border-4 border-inverse-surface p-10">
-<h3 class="font-label font-bold text-xs uppercase mb-4">核心数据</h3>
-<div class="flex flex-col gap-6">
-<div class="flex justify-between items-end border-b-2 border-inverse-surface pb-4">
-<span class="font-body text-sm"><span data-lang="zh">活跃用户</span><span data-lang="en">Active Users</span></span>
-<span class="font-headline font-black text-3xl tracking-tighter">12.4K</span>
-</div>
-<div class="flex justify-between items-end">
-<span class="font-body text-sm"><span data-lang="zh">运行时间</span><span data-lang="en">System Uptime</span></span>
-<span class="font-headline font-black text-3xl tracking-tighter">99.9%</span>
-</div>
-</div>
-</div>
-<div class="md:col-span-2 lg:col-span-2 bg-surface-container-low border-4 border-inverse-surface p-10 flex items-center justify-center">
-<div class="text-center">
-<span class="material-symbols-outlined text-5xl mb-2" style="font-variation-settings: 'FILL' 1;">rss_feed</span>
-<h4 class="font-headline font-bold text-lg uppercase tracking-tighter">订阅日志</h4>
-<div class="mt-4 flex border-4 border-inverse-surface">
-<input class="bg-transparent border-none focus:ring-0 font-label text-xs w-full px-3" placeholder="EMAIL" type="text"/>
-<button class="bg-inverse-surface text-surface px-4 py-2 font-label text-xs font-bold uppercase active:scale-95 transition-transform"><span data-lang="zh">加入</span><span data-lang="en">JOIN</span></button>
-</div>
-</div>
-</div>
-<div class="md:col-span-4 lg:col-span-2 bg-[#0d0f0d] text-surface p-10 border-4 border-inverse-surface shadow-[8px_8px_0px_0px_#0d0f0d] flex flex-col justify-between">
-<span class="font-label text-xs font-bold text-[#4ade80]">SYSTEM_STATUS: OK</span>
-<div class="mt-4">
-<p class="font-body text-xs leading-relaxed opacity-70"><span data-lang="zh">Artifact.dev 是思想与代码的数字仓库。建立在永恒与清晰的原则之上。</span><span data-lang="en">Artifact.dev is a digital repository of thoughts and code. Built on the principles of permanence and clarity.</span></p>
-</div>
-<div class="mt-4 flex gap-2">
-<div class="w-2 h-2 bg-[#4ade80] rounded-full animate-pulse"></div>
-<span class="font-label text-[10px] uppercase"><span data-lang="zh">来自 深圳 现场</span><span data-lang="en">Live from SZ</span></span>
-</div>
-</div>
-</div>
-</section>
-<footer class="w-full mt-20 p-8 flex flex-col items-center gap-12 bg-[#f7f7f3] dark:bg-[#0d0f0d] border-t-4 border-[#0d0f0d]">
-<div class="w-full max-w-7xl flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-<div class="flex flex-col gap-6">
-<h3 class="font-headline font-black text-3xl uppercase tracking-tighter editable-indicator">通用入口</h3>
-<div class="flex flex-wrap gap-3">
-<a class="border-4 border-[#0d0f0d] px-4 py-2 bg-[#ffff00] inline-block font-['Space_Grotesk'] text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0d0f0d] hover:bg-[#a80096] hover:text-white transition-colors cursor-pointer active:scale-95" href="#"><span data-lang="zh">根目录</span><span data-lang="en">Root</span></a>
-<a class="border-4 border-[#0d0f0d] px-4 py-2 bg-[#f7f7f3] inline-block font-['Space_Grotesk'] text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0d0f0d] hover:bg-[#a80096] hover:text-white transition-colors cursor-pointer active:scale-95" href="#"><span data-lang="zh">系统</span><span data-lang="en">System</span></a>
-<a class="border-4 border-[#0d0f0d] px-4 py-2 bg-[#f7f7f3] inline-block font-['Space_Grotesk'] text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0d0f0d] hover:bg-[#a80096] hover:text-white transition-colors cursor-pointer active:scale-95" href="#"><span data-lang="zh">日志</span><span data-lang="en">Logs</span></a>
-<a class="border-4 border-[#0d0f0d] px-4 py-2 bg-[#f7f7f3] inline-block font-['Space_Grotesk'] text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0d0f0d] hover:bg-[#a80096] hover:text-white transition-colors cursor-pointer active:scale-95" href="#">GitHub</a>
-<a class="border-4 border-[#0d0f0d] px-4 py-2 bg-[#f7f7f3] inline-block font-['Space_Grotesk'] text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0d0f0d] hover:bg-[#a80096] hover:text-white transition-colors cursor-pointer active:scale-95" href="#"><span data-lang="zh">镜像</span><span data-lang="en">Mirror</span></a>
-</div>
-</div>
-<div class="flex flex-col items-end gap-2">
-<span class="font-label text-sm font-bold uppercase text-[#0d0f0d]">©2024 PERMANENT_COLLECTION</span>
-<span class="font-label text-[10px] opacity-40">ESTABLISHED IN MMXIX</span>
-</div>
-</div>
-</footer>
-<script>
-    // Language Toggle logic
+
+<body class="font-body selection:bg-primary/30 selection:text-primary">
+
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 flex justify-center items-center px-6 py-8 pointer-events-none">
+    <nav
+      class="pointer-events-auto flex justify-between items-center glass rounded-full px-8 py-3 w-full max-w-5xl shadow-2xl">
+      <div class="flex items-center gap-12">
+        <span class="text-xl font-headline font-extrabold tracking-tight text-white">LIANG <span
+            class="text-primary">GE</span></span>
+        <div class="hidden md:flex gap-8">
+          <a class="text-sm font-medium text-on-surface-muted hover:text-white transition-colors" href="#"><span
+              data-lang="zh">档案</span><span data-lang="en">Archive</span></a>
+          <a class="text-sm font-medium text-white relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-primary"
+            href="#"><span data-lang="zh">实验室</span><span data-lang="en">Lab</span></a>
+          <a class="text-sm font-medium text-on-surface-muted hover:text-white transition-colors" href="#"><span
+              data-lang="zh">见解</span><span data-lang="en">Insights</span></a>
+        </div>
+      </div>
+      <div class="flex items-center gap-6">
+        <button
+          class="flex items-center bg-surface-lighter rounded-full p-1 border border-outline hover:border-primary/50 transition-all"
+          id="lang-toggle">
+          <span class="px-3 py-1 rounded-full text-[10px] font-bold bg-primary text-white" id="lang-indicator">ZH</span>
+          <span class="px-3 py-1 text-[10px] font-bold text-on-surface-muted">EN</span>
+        </button>
+        <button
+          class="material-symbols-outlined text-xl text-on-surface-muted hover:text-primary transition-colors">grid_view</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 pt-48 pb-24">
+    <!-- Hero Section -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-32 relative">
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/20 blur-[120px] rounded-full pointer-events-none">
+      </div>
+      <div class="lg:col-span-7 space-y-8 z-10">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Digital Craftsman
+        </div>
+        <h1 class="font-headline font-black text-6xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-white">
+          <span data-lang="zh" class="block">在噪声中寻找<span class="text-primary">信号</span></span>
+          <span data-lang="zh" class="block">在代码中构建<span class="text-glow">永恒</span></span>
+          <span data-lang="en" class="block">FIND SIGNAL IN <span class="text-primary">NOISE</span></span>
+          <span data-lang="en" class="block">BUILD ETERNITY IN <span class="text-glow">CODE</span></span>
+        </h1>
+        <p class="font-body text-xl text-on-surface-muted max-w-xl leading-relaxed">
+          <span data-lang="zh">我是亮哥。这是一场关于技术探索、独立思考与数字艺术的策展，记录那些试图超越平庸的瞬间。</span>
+          <span data-lang="en">I'm Liang Ge. A curation of technical exploration, independent thinking, and digital art,
+            documenting the moments that push beyond mediocrity.</span>
+        </p>
+        <div class="flex gap-4 pt-4">
+          <button
+            class="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
+            <span data-lang="zh">开始探索</span><span data-lang="en">Explore Now</span>
+          </button>
+          <button id="about-me-btn"
+            class="px-8 py-3 glass hover:bg-white/10 text-white font-bold rounded-xl transition-all">
+            <span data-lang="zh">关于我</span><span data-lang="en">About Me</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 z-10">
+        <div class="glass p-1 rounded-[2.5rem] shadow-2xl relative group">
+          <div
+            class="absolute -inset-1 bg-gradient-to-r from-primary to-accent opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-500">
+          </div>
+          <div class="relative bg-surface p-8 rounded-[2.2rem] space-y-8 border border-white/5">
+            <div class="flex justify-between items-start">
+              <div class="w-24 h-24 rounded-3xl overflow-hidden border-2 border-primary/30 p-1 bg-surface-lighter">
+                <img alt="Avatar" class="w-full h-full object-cover rounded-2xl"
+                  src="img/微信图片_20260418000615_536_1.png">
+              </div>
+              <div class="text-right">
+                <div class="text-[10px] font-mono font-bold text-primary uppercase tracking-[0.2em] mb-1">Authenticated
+                  ID</div>
+                <div class="text-sm font-mono text-on-surface-muted leading-tight">#LG-ARCHIVE-099</div>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <h3 class="font-headline font-bold text-2xl text-white">LIANG_GE<span class="text-primary">.dev</span>
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-1">
+                  <div class="text-[9px] uppercase font-bold text-on-surface-muted tracking-widest">Role</div>
+                  <div class="text-xs font-semibold">Project Architect</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-[9px] uppercase font-bold text-on-surface-muted tracking-widest">Location</div>
+                  <div class="text-xs font-semibold">Shenzhen, CN</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-[9px] uppercase font-bold text-on-surface-muted tracking-widest">Status</div>
+                  <div class="flex items-center gap-1.5 text-xs font-semibold text-accent">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                    Operational
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-[9px] uppercase font-bold text-on-surface-muted tracking-widest">Core</div>
+                  <div class="text-xs font-semibold">System Logic</div>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-outline">
+              <p class="font-mono text-[11px] text-on-surface-muted italic leading-relaxed">"The intersection of code
+                and craft is where the most meaningful signals emerge."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Bento Grid -->
+    <section id="projects" class="mb-32">
+      <div class="flex items-end justify-between mb-12">
+        <div class="space-y-2">
+          <h2 class="font-headline font-bold text-3xl text-white">精选馆藏 / Selected Archives</h2>
+          <div class="h-1 w-20 bg-primary"></div>
+        </div>
+        <a href="#"
+          class="text-sm font-bold text-primary hover:text-white transition-colors flex items-center gap-1 group">
+          VIEW ALL <span
+            class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[250px]">
+        <!-- Main Project -->
+        <div
+          class="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-3xl border border-outline bg-surface-lighter p-10 hover:border-primary/50 transition-all">
+          <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+            <span class="material-symbols-outlined text-[180px]">precision_manufacturing</span>
+          </div>
+          <div
+            class="relative h-full flex flex-col justify-between z-10 transition-transform duration-500 group-hover:-translate-y-2">
+            <div>
+              <div class="flex gap-2 mb-6">
+                <span
+                  class="px-3 py-1 rounded-lg bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider">Open
+                  Source</span>
+                <span
+                  class="px-3 py-1 rounded-lg bg-surface text-on-surface-muted text-[10px] font-bold uppercase tracking-wider">React</span>
+              </div>
+              <h3 class="font-headline font-bold text-5xl text-white mb-6 leading-tight">MATRIX TIME <br>DASHBOARD</h3>
+              <p class="text-on-surface-muted text-lg max-w-md leading-relaxed">
+                重新定义的数字看板。结合番茄钟与艾森豪威尔矩阵的多维效能工具，旨在将混沌转化为秩序。
+              </p>
+            </div>
+            <div class="pt-8">
+              <a href="https://matrix-time.xiaoliang.tech/" target="_blank"
+                class="inline-flex items-center gap-2 text-white font-bold group-2">
+                <span
+                  class="bg-primary px-6 py-3 rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-shadow">LAUNCH
+                  PROJECT</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Side -->
+        <div
+          class="md:col-span-4 md:row-span-2 group overflow-hidden rounded-3xl border border-outline bg-surface relative">
+          <div id="gallery-carousel" class="absolute inset-0 flex transition-transform duration-700 ease-in-out">
+            <img alt="Gallery 1"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              src="img/微信图片_20260417230649_534_1.jpg">
+            <img alt="Gallery 2"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              src="img/微信图片_20260417230645_530_1.jpg">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+          <div class="absolute inset-0 p-10 flex flex-col justify-between">
+            <div class="flex justify-between items-center text-white/50">
+              <span class="text-[10px] font-mono uppercase tracking-[0.3em]">Visual Journal</span>
+              <div class="flex gap-2" id="gallery-dots">
+                <div class="w-8 h-1 bg-primary rounded-full"></div>
+                <div class="w-4 h-1 bg-white/20 rounded-full"></div>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <h4 class="font-headline font-bold text-2xl text-white">光影记录</h4>
+              <p class="text-xs text-on-surface-muted uppercase tracking-widest">Shenzhen / 2024</p>
+            </div>
+          </div>
+          <div
+            class="absolute inset-y-0 left-0 flex items-center px-4 opacity-0 group-hover:opacity-100 transition-opacity">
+            <button onclick="moveGallery(-1)"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/20 transition-colors">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center px-4 opacity-0 group-hover:opacity-100 transition-opacity">
+            <button onclick="moveGallery(1)"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/20 transition-colors">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Reading Status -->
+        <div
+          class="md:col-span-6 lg:col-span-4 md:row-span-1 glass rounded-3xl p-8 flex gap-6 items-center border border-white/5">
+          <div class="relative flex-shrink-0">
+            <div
+              class="w-16 h-24 bg-surface-lighter rounded-lg border border-outline overflow-hidden shadow-xl transform group-hover:rotate-3 transition-transform">
+              <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+            </div>
+          </div>
+          <div class="space-y-3 flex-grow">
+            <div class="text-[9px] font-bold text-primary uppercase tracking-widest">Reading Now</div>
+            <h4 class="font-headline font-bold text-xl text-white">存在与虚无</h4>
+            <div class="relative h-1.5 w-full bg-surface-lighter rounded-full overflow-hidden">
+              <div class="absolute left-0 top-0 h-full bg-accent rounded-full" style="width: 65%"></div>
+            </div>
+            <div class="flex justify-between text-[10px] font-medium text-on-surface-muted">
+              <span>Sartre</span>
+              <span>65% Complete</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- System Status -->
+        <div
+          class="md:col-span-6 lg:col-span-8 md:row-span-1 bg-surface-lighter rounded-3xl p-8 flex items-center justify-between border border-outline relative overflow-hidden group">
+          <div
+            class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-[80px]">terminal</span>
+          </div>
+          <div class="space-y-2 z-10">
+            <div class="flex items-center gap-2 text-[10px] font-mono font-bold text-accent uppercase">
+              <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+              System Operational
+            </div>
+            <p class="text-on-surface-muted text-sm italic font-medium leading-relaxed max-w-md">
+              "构建不仅仅是代码的堆砌，而是逻辑与审美的终极妥协。"
+            </p>
+          </div>
+          <div class="hidden lg:block text-right z-10">
+            <div class="text-[10px] font-mono text-on-surface-muted italic">Uptime: 102kh 12m</div>
+            <div class="text-xs font-mono font-bold text-white">VER: 1.0.42_STABLE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools" class="mb-32">
+      <div class="flex items-center gap-6 mb-12">
+        <h2 class="font-headline font-bold text-2xl text-white whitespace-nowrap">常用构建单元 / Build Units</h2>
+        <div class="h-px flex-grow bg-outline"></div>
+      </div>
+      <div class="flex overflow-x-auto gap-4 pb-8 no-scrollbar">
+        <a href="https://notebooklm.google.com" target="_blank"
+          class="flex flex-col items-center gap-4 p-8 glass min-w-[180px] rounded-3xl hover:border-primary/50 transition-all hover:-translate-y-1 group">
+          <div
+            class="w-12 h-12 rounded-2xl bg-surface flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+            <img src="img/tools/notebooklm.svg" alt="NotebookLM" class="w-8 h-8 opacity-60 group-hover:opacity-100">
+          </div>
+          <span class="text-[11px] font-bold text-on-surface-muted uppercase tracking-widest">NotebookLM</span>
+        </a>
+        <a href="https://stitch.withgoogle.com" target="_blank"
+          class="flex flex-col items-center gap-4 p-8 glass min-w-[180px] rounded-3xl hover:border-primary/50 transition-all hover:-translate-y-1 group">
+          <div
+            class="w-12 h-12 rounded-2xl bg-surface flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+            <img src="img/tools/stitch.svg" alt="Stitch" class="w-8 h-8 opacity-60 group-hover:opacity-100">
+          </div>
+          <span class="text-[11px] font-bold text-on-surface-muted uppercase tracking-widest">Stitch</span>
+        </a>
+        <a href="#"
+          class="flex flex-col items-center gap-4 p-8 glass min-w-[180px] rounded-3xl hover:border-primary/50 transition-all hover:-translate-y-1 group">
+          <div
+            class="w-12 h-12 rounded-2xl bg-surface flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+            <img src="img/tools/jetbrains.svg" alt="JetBrains" class="w-8 h-8 opacity-60 group-hover:opacity-100">
+          </div>
+          <span class="text-[11px] font-bold text-on-surface-muted uppercase tracking-widest">JetBrains</span>
+        </a>
+        <a href="#"
+          class="flex flex-col items-center gap-4 p-8 glass min-w-[180px] rounded-3xl hover:border-primary/50 transition-all hover:-translate-y-1 group">
+          <div
+            class="w-12 h-12 rounded-2xl bg-surface flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+            <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+          </div>
+          <span class="text-[11px] font-bold text-on-surface-muted uppercase tracking-widest">Console.sh</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full border-t border-outline py-20 bg-surface">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12">
+      <div class="md:col-span-5 space-y-6">
+        <span class="text-xl font-headline font-extrabold tracking-tight text-white uppercase">LIANG <span
+            class="text-primary">GE</span></span>
+        <p class="text-sm text-on-surface-muted font-medium leading-relaxed max-w-xs">
+          致力于探索数字世界的边界，用代码和逻辑构建具有持久价值的艺术。
+        </p>
+        <div class="flex gap-4">
+          <!-- Social icons placeholder -->
+          <div class="w-8 h-8 rounded-lg bg-surface-lighter border border-outline"></div>
+          <div class="w-8 h-8 rounded-lg bg-surface-lighter border border-outline"></div>
+        </div>
+      </div>
+      <div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
+        <div class="space-y-4">
+          <h5 class="text-xs font-bold uppercase tracking-widest text-white">Archives</h5>
+          <ul class="space-y-2 text-sm text-on-surface-muted">
+            <li><a href="#" class="hover:text-primary transition-colors">Projects</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Experiments</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Lab Logs</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h5 class="text-xs font-bold uppercase tracking-widest text-white">Resources</h5>
+          <ul class="space-y-2 text-sm text-on-surface-muted">
+            <li><a href="#" class="hover:text-primary transition-colors">Reading List</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Toolbox</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Mirror</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h5 class="text-xs font-bold uppercase tracking-widest text-white">System</h5>
+          <p class="text-[10px] font-mono text-on-surface-muted leading-tight border-l-2 border-primary pl-3">
+            ©2024 PERMANENT_COLLECTION <br>
+            ALL RIGHTS RESERVED. <br>
+            EST. IN MMXIX
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- About Me Modal -->
+  <div id="about-modal"
+    class="fixed inset-0 z-[100] flex items-center justify-center p-6 opacity-0 pointer-events-none transition-all duration-500">
+    <div class="absolute inset-0 bg-background/80 backdrop-blur-xl" onclick="toggleModal()"></div>
+    <div
+      class="relative glass bg-surface max-w-2xl w-full p-8 md:p-12 rounded-[2.5rem] border border-white/10 shadow-3xl transform scale-95 transition-transform duration-500 overflow-y-auto max-h-[90vh] no-scrollbar">
+      <button onclick="toggleModal()"
+        class="absolute top-6 right-6 text-on-surface-muted hover:text-white transition-colors">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+
+      <div class="space-y-12">
+        <div class="space-y-4">
+          <h2 class="font-headline font-black text-4xl text-white tracking-tight">时光轴 / <span
+              class="text-primary">Timeline</span></h2>
+          <p class="text-on-surface-muted">那些关于汗水、迷茫与突破的瞬间。</p>
+        </div>
+
+        <div
+          class="space-y-10 relative before:absolute before:left-2 before:top-2 before:bottom-2 before:w-px before:bg-outline">
+          <!-- Junior High -->
+          <div class="relative pl-10">
+            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
+            <div class="space-y-3 p-6 rounded-2xl bg-white/5 border border-white/5">
+              <h4 class="font-bold text-xl text-white">初中：突破之夏</h4>
+              <p class="text-on-surface-muted leading-relaxed">
+                早期玩耍频繁，成绩起伏不定。初三上学期一度停课，随后在沉静中埋头苦学。最终统考拿下数学第一、总分年级前三十。
+              </p>
+            </div>
+          </div>
+
+          <!-- High School -->
+          <div class="relative pl-10">
+            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-background"></div>
+            <div class="space-y-3 p-6 rounded-2xl bg-white/5 border border-white/5">
+              <h4 class="font-bold text-xl text-white">高中：逆风翻盘</h4>
+              <p class="text-on-surface-muted leading-relaxed">
+                入学起点较低，曾因沉迷游戏跌至总分 330/750 的谷底。面对班主任的退却劝告，我选择在凌晨醒来复习，死磕错题。最终以超出本科线 60 分完成逆转。
+              </p>
+            </div>
+          </div>
+
+          <!-- University -->
+          <div class="relative pl-10">
+            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-accent border-4 border-background"></div>
+            <div class="space-y-3 p-6 rounded-2xl bg-white/5 border border-white/5">
+              <h4 class="font-bold text-xl text-white">大学：稳步成长</h4>
+              <p class="text-on-surface-muted leading-relaxed">
+                成绩稳中有升，在大一结识了现任伴侣。四年间专注于学习与生活的平衡，目前正步入大四阶段，开启新的探索。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // About Modal Toggle
+    const aboutBtn = document.getElementById('about-me-btn');
+    const modal = document.getElementById('about-modal');
+    const modalContent = modal.querySelector('.relative.glass');
+
+    const toggleModal = () => {
+      const isHidden = modal.classList.contains('pointer-events-none');
+      if (isHidden) {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+        document.body.style.overflow = 'hidden';
+      } else {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modalContent.classList.add('scale-95');
+        modalContent.classList.remove('scale-100');
+        document.body.style.overflow = 'auto';
+      }
+    };
+
+    aboutBtn.addEventListener('click', toggleModal);
+
+    // Language Toggle
     const langToggle = document.getElementById('lang-toggle');
     const langIndicator = document.getElementById('lang-indicator');
     const langSpans = langToggle.querySelectorAll('span');
     let currentLang = 'zh';
 
     langToggle.addEventListener('click', () => {
-        currentLang = currentLang === 'zh' ? 'en' : 'zh';
-        document.body.classList.toggle('lang-en', currentLang === 'en');
-        
-        // Update button UI
-        if (currentLang === 'en') {
-            langSpans[0].classList.remove('bg-tertiary-fixed', 'opacity-100', 'border-r-4');
-            langSpans[0].classList.add('opacity-40');
-            langSpans[1].classList.remove('opacity-40');
-            langSpans[1].classList.add('bg-tertiary-fixed', 'opacity-100', 'border-l-4', 'border-inverse-surface');
-        } else {
-            langSpans[1].classList.remove('bg-tertiary-fixed', 'opacity-100', 'border-l-4');
-            langSpans[1].classList.add('opacity-40');
-            langSpans[0].classList.remove('opacity-40');
-            langSpans[0].classList.add('bg-tertiary-fixed', 'opacity-100', 'border-r-4', 'border-inverse-surface');
-        }
+      currentLang = currentLang === 'zh' ? 'en' : 'zh';
+      document.body.classList.toggle('lang-en', currentLang === 'en');
+
+      if (currentLang === 'en') {
+        langSpans[0].className = 'px-3 py-1 text-[10px] font-bold text-on-surface-muted';
+        langSpans[1].className = 'px-3 py-1 rounded-full text-[10px] font-bold bg-primary text-white';
+      } else {
+        langSpans[1].className = 'px-3 py-1 text-[10px] font-bold text-on-surface-muted';
+        langSpans[0].className = 'px-3 py-1 rounded-full text-[10px] font-bold bg-primary text-white';
+      }
     });
 
-    // Dev Mode logic
-    const devModeToggle = document.getElementById('dev-mode-toggle');
-    const devModeKnob = document.getElementById('dev-mode-knob');
-    const editableElements = document.querySelectorAll('.editable-indicator');
-    let devModeActive = false;
+    // Simple Gallery Carousel
+    let galleryIndex = 0;
+    const galleryCarousel = document.getElementById('gallery-carousel');
+    const dots = document.getElementById('gallery-dots')?.children;
 
-    devModeToggle.addEventListener('click', () => {
-        devModeActive = !devModeActive;
-        devModeKnob.style.left = devModeActive ? 'calc(100% - 0.75rem - 4px)' : '4px';
-        
-        editableElements.forEach(el => {
-            el.setAttribute('contenteditable', devModeActive.toString());
-            if (devModeActive) {
-                el.classList.add('outline-2', 'outline-dashed', 'outline-[#a80096]', 'outline-offset-4');
-            } else {
-                el.classList.remove('outline-2', 'outline-dashed', 'outline-[#a80096]', 'outline-offset-4');
-            }
+    window.moveGallery = (step) => {
+      if (!galleryCarousel) return;
+      const count = galleryCarousel.children.length;
+      galleryIndex = (galleryIndex + step + count) % count;
+      galleryCarousel.style.transform = `translateX(-${galleryIndex * 100}%)`;
+
+      if (dots) {
+        Array.from(dots).forEach((dot, idx) => {
+          dot.style.width = idx === galleryIndex ? '2rem' : '1rem';
+          dot.style.backgroundColor = idx === galleryIndex ? '#6366f1' : 'rgba(255, 255, 255, 0.2)';
         });
-    });
-    /* Render blog JSON */
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/data/blog.json')
-        .then(r => r.json())
-        .then(items => {
-          const plan = document.getElementById('plan-container');
-          const proj = document.getElementById('projects-container');
-          items.forEach(item => {
-            const card = document.createElement('div');
-            card.className = 'card border-4 border-inverse-surface shadow-[4px_4px_0px_0px_#0d0f0d] overflow-hidden';
-            card.innerHTML = `
-              <div class="card-inner relative transition-transform duration-300">
-                <div class="card-front p-4">
-                  <h3 class="font-headline font-black text-xl mb-2">${item.title}</h3>
-                  <div class="content">${item.content}</div>
-                </div>
-                <div class="card-back p-4 bg-[#fffdec] hidden"></div>
-              </div>`;
-            if (item.tags.includes('规划')) plan.appendChild(card);
-            else if (item.tags.includes('项目')) proj.appendChild(card);
-          });
-        })
-        .catch(err => console.error('Failed to load blog data', err));
-    });
-</script>
+      }
+    };
+
+    // Auto-scroll gallery
+    setInterval(() => moveGallery(1), 8000);
+  </script>
 </body>
+
 </html>
